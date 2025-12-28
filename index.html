@@ -695,7 +695,6 @@
         <a href="#home" class="active">首页</a>
         <a href="#about">关于我</a>
         <a href="#hobbies">兴趣爱好</a>
-        <a href="#dream">我的梦想</a>
         <a href="#goals">目标规划</a>
         <a href="#contact">联系我</a>
     </nav>
@@ -973,6 +972,20 @@
             }
         }
         
+        // 创建小黄人网格
+        function createMinionGrid() {
+          const grid = document.getElementById('minionGrid');
+          const minions = ['😎', '🤪', '😉', '🤓', '🥳', '🤖', '👾', '🤡'];
+            
+          for (let i = 0; i < 64; i++) {
+              const minion = document.createElement('div');
+              minion.className = 'minion-emoji';
+              minion.textContent = minions[Math.floor(Math.random() * minions.length)];
+              minion.style.animationDelay = `${Math.random() * 4}s`;
+              grid.appendChild(minion);
+            }
+        }
+        
         // 滚动监听
         function setupScrollObservers() {
             const fadeElements = document.querySelectorAll('.fade-in');
@@ -1071,3 +1084,4 @@
     </script>
 </body>
 </html>
+
