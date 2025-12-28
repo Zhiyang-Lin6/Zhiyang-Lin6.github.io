@@ -617,6 +617,29 @@
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(var(--blue-dark), var(--yellow-dark));
         }
+
+         /* 左下角图片的CSS样式 */
+    .hero-image-left-bottom {
+        position: absolute;
+        left: 5%;
+        bottom: 10%;
+        z-index: 1;
+    }
+    
+    .corner-image {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 5px solid var(--yellow);
+        transition: var(--transition);
+    }
+    
+    .corner-image:hover {
+        transform: rotate(-5deg) scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
     </style>
 </head>
 <body>
@@ -640,6 +663,12 @@
     
     <!-- 首页英雄区域 -->
     <section id="home" class="hero-section">
+        <!-- 左下角图片 -->
+    <div class="hero-image-left-bottom">
+        <img src="tianjia。jpg" alt="左下角图片" class="corner-image">
+    </div>
+    
+    <div class="hero-content">
         <div class="hero-content">
             <h1 class="hero-title">欢迎来到我的小世界</h1>
             <p class="hero-subtitle" style="color: #000000;">Step into my little world</p>
@@ -1001,6 +1030,7 @@
     </script>
 </body>
 </html>
+
 
 
 
