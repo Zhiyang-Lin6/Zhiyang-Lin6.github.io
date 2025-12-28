@@ -218,7 +218,7 @@
             cursor: pointer;
         }
         
-        .rotating-card.flipped {
+        .rotating-card.hover {
             transform: rotateY(180deg);
         }
         
@@ -243,7 +243,7 @@
         .card-back {
             background: white;
             color: var(--gray);
-            transform: rotateY(180deg) rotateY(180deg);
+            transform: rotateY(180deg);
         }
         
         .card-icon {
@@ -970,6 +970,8 @@
                 card.addEventListener('click', () => {
                     card.classList.toggle('flipped');
                 });
+             });
+           }
                 
                 // 鼠标悬停效果
                 card.addEventListener('mouseenter', () => {
@@ -999,6 +1001,7 @@
     </script>
 </body>
 </html>
+
 
 
 
