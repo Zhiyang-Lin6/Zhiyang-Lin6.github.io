@@ -39,60 +39,7 @@
             overflow-x: hidden;
         }
         
-        /* 背景动画 */
-        .background-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            overflow: hidden;
-        }
-        
-        .floating-banana {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: var(--yellow);
-            border-radius: 50% 50% 50% 0;
-            transform: rotate(-45deg);
-            animation: floatBanana 20s infinite linear;
-            opacity: 0.3;
-        }
-        
-        @keyframes floatBanana {
-            0% { transform: translateY(100vh) rotate(0deg); }
-            100% { transform: translateY(-100px) rotate(360deg); }
-        }
-        
-        /* 波浪分隔线 */
-        .wave-separator {
-            position: relative;
-            height: 150px;
-            overflow: hidden;
-            margin: 80px 0;
-        }
-        
-        .wave {
-            position: absolute;
-            width: 200%;
-            height: 100%;
-            background: linear-gradient(90deg, var(--blue) 0%, var(--blue-light) 50%, var(--yellow) 100%);
-            animation: waveMove 10s linear infinite;
-            opacity: 0.1;
-        }
-        
-        .wave:nth-child(2) {
-            animation-delay: -5s;
-            opacity: 0.05;
-        }
-        
-        @keyframes waveMove {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
-        }
-        
+
         /* 导航栏 */
         .floating-nav {
             position: fixed;
@@ -630,8 +577,8 @@
         width: 450px;
         height: 400px;
         object-fit: cover;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        box-shadow:none;
         transition: var(--transition);
     }
     
@@ -642,8 +589,6 @@
     </style>
 </head>
 <body>
-    <!-- 背景动画 -->
-    <div class="background-animation" id="backgroundAnimation"></div>
     
     <!-- 悬浮导航 -->
     <nav class="floating-nav">
@@ -653,12 +598,6 @@
         <a href="#goals">目标规划</a>
         <a href="#contact">联系我</a>
     </nav>
-    
-    <!-- 波浪分隔线 -->
-    <div class="wave-separator">
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
     
     <!-- 首页英雄区域 -->
     <section id="home" class="hero-section">
@@ -728,13 +667,7 @@
             </div>
         </div>
     </section>
-    
-    <!-- 波浪分隔线 -->
-    <div class="wave-separator">
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
-    
+
     <!-- 兴趣爱好 -->
     <section id="hobbies" class="hobbies-section">
         <h2 class="section-title">兴趣爱好</h2>
@@ -917,21 +850,7 @@
     </button>
 
     <script>
-        // 创建漂浮香蕉背景
-        function createBananaBackground() {
-            const background = document.getElementById('backgroundAnimation');
-            for (let i = 0; i < 20; i++) {
-                const banana = document.createElement('div');
-                banana.className = 'floating-banana';
-                banana.style.left = `${Math.random() * 100}%`;
-                banana.style.animationDelay = `${Math.random() * 20}s`;
-                banana.style.animationDuration = `${10 + Math.random() * 20}s`;
-                banana.style.width = `${20 + Math.random() * 30}px`;
-                banana.style.height = banana.style.width;
-                background.appendChild(banana);
-            }
-        }
-        
+       
         // 滚动监听
         function setupScrollObservers() {
             const fadeElements = document.querySelectorAll('.fade-in');
@@ -1029,6 +948,7 @@
     </script>
 </body>
 </html>
+
 
 
 
