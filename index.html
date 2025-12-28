@@ -642,8 +642,6 @@
     </style>
 </head>
 <body>
-    <!-- 背景动画 -->
-    <div class="background-animation" id="backgroundAnimation"></div>
     
     <!-- 悬浮导航 -->
     <nav class="floating-nav">
@@ -654,11 +652,6 @@
         <a href="#contact">联系我</a>
     </nav>
     
-    <!-- 波浪分隔线 -->
-    <div class="wave-separator">
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
     
     <!-- 首页英雄区域 -->
     <section id="home" class="hero-section">
@@ -743,7 +736,7 @@
                 <img src="meishi.jpg" alt="美食" class="masonry-img">
                 <div class="masonry-content">
                     <h3 class="masonry-title">美食探索家</h3>
-                    <p>热爱尝试世界各地美食<br>特别擅长寻找隐藏在小巷中的美味。</p>
+                    <p>热爱尝试世界各地美食<br>特别擅长寻找隐藏在小巷中的美味</p>
                 </div>
             </div>
             
@@ -759,7 +752,7 @@
                 <img src="xiaohuangren.jpg" alt="小黄人" class="masonry-img">
                 <div class="masonry-content">
                     <h3 class="masonry-title">小黄人收藏家</h3>
-                    <p>拥有超过50个小黄人周边<br>最大的愿望是拥有各式各样的小黄人。</p>
+                    <p>拥有超过50个小黄人周边<br>最大的愿望是拥有各式各样的小黄人</p>
                 </div>
             </div>
             
@@ -916,21 +909,6 @@
     </button>
 
     <script>
-        // 创建漂浮香蕉背景
-        function createBananaBackground() {
-            const background = document.getElementById('backgroundAnimation');
-            for (let i = 0; i < 20; i++) {
-                const banana = document.createElement('div');
-                banana.className = 'floating-banana';
-                banana.style.left = `${Math.random() * 100}%`;
-                banana.style.animationDelay = `${Math.random() * 20}s`;
-                banana.style.animationDuration = `${10 + Math.random() * 20}s`;
-                banana.style.width = `${20 + Math.random() * 30}px`;
-                banana.style.height = banana.style.width;
-                background.appendChild(banana);
-            }
-        }
-        
         // 滚动监听
         function setupScrollObservers() {
             const fadeElements = document.querySelectorAll('.fade-in');
@@ -1016,7 +994,6 @@
         
         // 初始化
         document.addEventListener('DOMContentLoaded', () => {
-            createBananaBackground();
             setupScrollObservers();
             setupScrollTop();
             setupCardInteractions();
@@ -1028,6 +1005,7 @@
     </script>
 </body>
 </html>
+
 
 
 
