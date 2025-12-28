@@ -973,20 +973,6 @@
             }
         }
         
-        // 创建小黄人网格
-        function createMinionGrid() {
-            const grid = document.getElementById('minionGrid');
-            const minions = ['😎', '🤪', '😉', '🤓', '🥳', '🤖', '👾', '🤡'];
-            
-            for (let i = 0; i < 64; i++) {
-                const minion = document.createElement('div');
-                minion.className = 'minion-emoji';
-                minion.textContent = minions[Math.floor(Math.random() * minions.length)];
-                minion.style.animationDelay = `${Math.random() * 4}s`;
-                grid.appendChild(minion);
-            }
-        }
-        
         // 滚动监听
         function setupScrollObservers() {
             const fadeElements = document.querySelectorAll('.fade-in');
@@ -1085,5 +1071,3 @@
     </script>
 </body>
 </html>
-
-
