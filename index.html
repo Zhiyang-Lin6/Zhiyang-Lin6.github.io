@@ -959,38 +959,12 @@
                     behavior: 'smooth'
                 });
             });
-        }
-        
-        // 旋转卡片点击事件
-        function setupCardInteractions() {
-            const cards = document.querySelectorAll('.rotating-card');
-            
-            cards.forEach(card => {
-                // 点击翻转
-                card.addEventListener('click', () => {
-                    card.classList.toggle('flipped');
-                });
-                
-                // 鼠标悬停效果
-                card.addEventListener('mouseenter', () => {
-                    if (!card.classList.contains('flipped')) {
-                        card.style.transform = 'rotateY(10deg)';
-                    }
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    if (!card.classList.contains('flipped')) {
-                        card.style.transform = 'rotateY(0)';
-                    }
-                });
-            });
-        }
-        
+        }      
+  
         // 初始化
         document.addEventListener('DOMContentLoaded', () => {
             setupScrollObservers();
             setupScrollTop();
-            setupCardInteractions();
             
             // 控制台欢迎信息
             console.log('%c😎 欢迎来到林志扬的小黄人世界！', 'font-size: 20px; color: #FFD700; font-weight: bold; text-shadow: 2px 2px 0 #1976D2');
@@ -999,4 +973,5 @@
     </script>
 </body>
 </html>
+
 
